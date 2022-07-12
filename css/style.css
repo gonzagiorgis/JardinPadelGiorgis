@@ -1,0 +1,1324 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Charis+SIL&family=Rajdhani:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+a:active {
+    text-decoration: none;
+    color: rgb(39, 102, 120);
+}
+
+body {
+    background-color: rgb(246, 245, 245);
+}
+
+nav.nav__flex ul li {
+    padding-left: 5px 10px;
+}
+
+.nav__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__nav {
+    font-size: 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 5px rgb(129, 129, 129);
+    background-color: rgb(255, 255, 255);
+    z-index: 50;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap row;
+    align-items: flex-end;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+
+.boxgreen {
+    background-color: lightgreen;
+}
+
+.boxcoral {
+    background-color: lightcoral;
+}
+
+.main__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "titulo""torneo""noticia""promos";
+    row-gap: 10px;
+}
+
+.titulo__contenedor {
+    grid-area: titulo;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/aerearectangular.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.torneo__container {
+    grid-area: torneo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticia__container {
+    grid-area: noticia;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promos__container {
+    grid-area: promos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box__shadow {
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+}
+
+
+/* formatos de texto */
+
+.h1__bebas--white {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.h2__rad {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(211, 224, 234, .7);
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+    text-align: center;
+    width: 80vw;
+    padding: 5px 0;
+    display: block;
+}
+
+.h2__rad--w {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(211, 224, 234, .7);
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+    text-align: center;
+    width: 80vw;
+    padding: 5px 0;
+    display: block;
+}
+
+.h3__roboto--background {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(211, 224, 234);
+    background-color: rgb(39, 102, 120);
+    padding: 5px;
+}
+
+.h3__roboto--menor {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(211, 224, 234);
+    background-color: rgb(39, 102, 120);
+    padding: 5px;
+    width: 25%;
+}
+
+
+.text__roboto--backgrond {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    max-width: 90vw;
+    margin-top: 5px;
+    padding: 0 5px;
+    background-color: rgba(173, 216, 230, 0.7);
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+}
+
+.text__roboto--white {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.text__roboto--whiteMenor {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    color: rgb(255, 255, 255);
+}
+
+.title__article {
+    background-color: rgb(22, 135, 167);
+    color: rgb(246, 245, 245);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    text-align: center;
+
+}
+
+.title__promo {
+    background-color: rgb(22, 135, 167);
+    font-size: 1rem;
+    color: rgb(246, 245, 245);
+    font-family: 'Roboto', sans-serif;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    padding: 5px;
+}
+
+.text__roboto--article {
+    background-color: rgb(22, 135, 167);
+    font-size: 1rem;
+    color: rgb(246, 245, 245);
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    list-style: none;
+}
+
+.text__article--tips {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: rgb(105, 105, 105);
+    text-align: center;
+    max-width: 90vw;
+    margin-top: 5px;
+    padding: 0 5px;
+    background-color: rgba(173, 216, 230, 0.877);
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+}
+
+.text__roboto--center {
+    background-color: rgb(22, 135, 167);
+    font-size: 0.8rem;
+    color: rgb(246, 245, 245);
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    list-style: none;
+    text-align: center;
+    width: 25%;
+}
+
+.text__roboto--black {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+
+}
+
+.text__charis {
+    font-family: 'Charis SIL', serif;
+    font-size: 1.4rem;
+    text-align: center;
+    color: rgb(39, 102, 120);
+}
+
+/* fin formatos de texto */
+
+
+.img__article {
+    max-width: 80vw;
+    margin: 5px;
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+}
+
+.img__logo {
+    height: 10vh;
+}
+
+.img__fit {
+    object-fit: cover;
+}
+
+.img__logo--footer {
+    height: 10vh;
+    display: none;
+}
+
+.img__promo {
+    width: 144px;
+    height: 179px;
+    margin: 5px;
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+}
+
+.img__menu {
+    width: 95vw;
+}
+
+.width__vw40 {
+    max-width: 40vw;
+}
+
+.padding__5 {
+    padding: 5px;
+}
+
+.padding__10 {
+    padding: 10px;
+}
+
+.icon {
+    width: 18px;
+    /* max-width: ; */
+}
+
+.display__flex {
+    display: flex;
+}
+
+.section__consulta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.article__promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.flecha {
+    width: 30px;
+}
+
+.contenedor__flecha {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 60;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.footerFlex {
+    display: flex;
+    height: fit-content;
+    font-size: 0;
+    flex-direction: row;
+    background-color: rgb(22, 135, 167);
+    justify-content: space-between;
+
+}
+
+.siguenos {
+    width: 100%;
+    text-align: center;
+}
+
+.footer__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.whatsapp {
+    display: flex;
+    align-items: center;
+}
+
+.lista__disco {
+    list-style: disc;
+    list-style-position: inside;
+    color: hsl(0, 0%, 0%);
+    padding-left: 10px;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    padding: 5px;
+    row-gap: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+}
+
+/* inicio clases para formulario */
+.formulario__consulta {
+    font-size: 1rem;
+    width: 95vw;
+    font-weight: 700;
+
+}
+
+.formulario__turnos {
+    font-family: 'Roboto', sans-serif;
+    width: 95vw;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.campo__formulario {
+    border: solid rgb(153, 153, 153) 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    border-radius: 3px;
+
+}
+
+.campo__formulario--turno {
+    border: solid rgb(153, 153, 153) 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.labels__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(95, 95, 95);
+}
+
+.input__text {
+    height: 1.4rem;
+    width: 260px;
+    font-size: 1rem;
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 3px;
+}
+
+input,
+[type=date] {
+    width: 140px;
+}
+
+input,
+[type=time] {
+    width: 100px;
+}
+
+.input__text:focus {
+    border-color: rgb(22, 135, 167);
+}
+
+#duracion {
+    list-style: none;
+    width: 100%;
+}
+
+#consulta {
+    width: 80vw;
+    height: 20vh;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 3px;
+    border-color: rgb(22, 135, 167);
+}
+
+.buton__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 3px rgb(129, 129, 129);
+
+}
+
+.btn-green {
+    color: white;
+    border: none;
+    background-color: rgb(71, 202, 73);
+    border: none;
+
+}
+
+.btn-green:hover {
+    background-color: rgb(50, 168, 52);
+    cursor: pointer;
+    ;
+}
+
+.btn-green:active {
+    background-color: rgb(31, 119, 32);
+}
+
+.btn-grey {
+    color: white;
+    background-color: rgb(172, 172, 172);
+    border: none;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
+
+.btn-grey:hover {
+    background-color: rgb(151, 151, 151);
+    cursor: pointer;
+}
+
+.btn-grey:active {
+    background-color: rgb(87, 87, 87);
+}
+
+/* fin clases de formulario */
+
+/* inicio grid responsive pagina torneos */
+.torneos__proximos {
+    grid-area: proximos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 0 5px 20px 5px;
+}
+
+.main__torneos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "titulo"
+        "proximos"
+        "finalizados";
+}
+
+
+
+.torneos__finalizados {
+    grid-area: finalizados;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "titulo"
+        "art1"
+        "art2";
+    justify-items: center;
+    row-gap: 10px;
+    padding: 0 5px 20px 5px;
+}
+
+.contenedor__tablas--torneos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.titulo__torneos--finalizados {
+    grid-area: titulo;
+}
+
+.art1__finalizados {
+    grid-area: art1;
+}
+
+.art2__finalizados {
+    grid-area: art2;
+}
+
+.tabla__proximo--torneo {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        "fecha categoria"
+        "inscribir inscribir";
+    column-gap: 10px;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.top-tabla {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.bottom__tabla {
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+}
+
+.contenedor__fecha {
+    grid-area: fecha;
+}
+
+.contenedor__categoria {
+    grid-area: categoria;
+}
+
+.contenedor__inscribir {
+    grid-area: inscribir;
+}
+
+/* fin pagina torneos */
+
+/* inicio pagina promociones */
+
+.contenedor__promociones {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "promo1"
+        "promo2"
+        "promo3"
+        "promo4"
+        "promo5";
+    row-gap: 5px;
+}
+
+.promo1 {
+    grid-area: promo1;
+}
+
+.promo2 {
+    grid-area: promo2;
+}
+
+.promo3 {
+    grid-area: promo3;
+}
+
+.promo4 {
+    grid-area: promo4;
+}
+
+.promo5 {
+    grid-area: promo5;
+}
+
+/* fin página promociones */
+
+/* inicio clases pagina tips */
+
+.container__tips {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+    grid-template-areas:
+        "text__tip1"
+        "video__tip1"
+        "text__tip2"
+        "video__tip2";
+}
+
+.video__tip1 {
+    width: 302px;
+    height: 170px;
+}
+
+.video__tip2 {
+    width: 95vw;
+    height: auto;
+}
+
+.text__tip1 {
+    grid-area: text__tip1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    padding: 5px;
+}
+
+.text__tip2 {
+    grid-area: text__tip2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    padding: 5px;
+}
+
+/* fin pagina tips */
+
+/* inicio clases pagina servicios */
+
+.info__clases {
+    grid-area: infoClases;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    row-gap: 10px;
+
+}
+
+.bar {
+    grid-area: bar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 5px 10px;
+}
+
+.contenedor__instalaciones {
+    grid-area: instalaciones;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.contenedor__secciones--servicios {
+    display: grid;
+    grid-template-columns: 95vw;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "infoClases"
+        "instalaciones"
+        "bar";
+    row-gap: 10px;
+    justify-content: center;
+
+}
+
+.instalaciones {
+    display: grid;
+    grid-template-columns: 95vw;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+        "titulo"
+        "canchas"
+        "estacionamiento"
+        "barInfo"
+        "asadores"
+        "baños";
+    padding: 5px 5px;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.canchas {
+    grid-area: canchas;
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+
+}
+
+.estacionamiento {
+    grid-area: estacionamiento;
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+
+}
+
+.bar__info {
+    grid-area: barInfo;
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+
+}
+
+.baños {
+    grid-area: baños;
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+
+}
+
+.asadores {
+    grid-area: asadores;
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+
+}
+
+
+
+.encabezados__clases {
+    display: flex;
+    text-align: center;
+    width: 90vw;
+    justify-content: center;
+
+}
+
+.info__clase1 {
+    display: flex;
+    width: 90vw;
+}
+
+.info__clase2 {
+    display: flex;
+    margin-bottom: 5px;
+    width: 90vw;
+}
+
+
+/* fin pagina servicios */
+
+/* inicio clases pagina condiciones */
+
+.contenedor__condiciones {
+    display: grid;
+    grid-template-columns: 95vw;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "reglamento""reservas""uso";
+    row-gap: 15px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+.reservas {
+    grid-area: reservas;
+}
+
+.reglamento {
+    grid-area: reglamento;
+}
+
+.uso__instalaciones {
+    grid-area: uso;
+}
+
+
+@media (min-width: 768px) {
+
+    .nav__flex {
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .nav__list {
+        font-size: 1rem;
+    }
+
+    nav ul.nav__list li {
+        padding: 0 10px;
+    }
+
+    .titulo__contenedor {
+        height: 90vh;
+    }
+
+    .h1__bebas--white {
+        font-size: 3rem;
+    }
+
+    .text__roboto--backgrond {
+        font-size: 1.2rem;
+    }
+
+    .article__promo {
+        justify-content: center;
+    }
+
+    .promos__row {
+        width: 95vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .img__article {
+        max-width: 50vw;
+    }
+
+    .icon {
+        width: 22px;
+    }
+
+    .footerFlex {
+        justify-content: space-around;
+    }
+
+    .text__roboto--whiteMenor {
+        font-size: 1rem;
+    }
+
+    .text__roboto--article {
+        font-size: 1rem;
+    }
+
+    .h2__rad {
+
+        font-size: 1.3rem;
+    }
+
+    .h2__rad--w {
+        font-size: 1.3rem;
+        width: 30vw;
+    }
+
+    .contenedor__flecha {
+        display: block;
+    }
+
+    .img__logo--footer {
+        display: block;
+    }
+
+    .formulario__consulta {
+        width: 40%;
+    }
+
+    .ubicacion {
+        width: 55%;
+        height: 62vh;
+    }
+
+    .article {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .section__consulta {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .labels__container {
+        font-size: 1rem;
+        align-items: flex-start;
+    }
+
+    .input__text {
+        height: 1.6rem;
+        font-size: 1rem;
+    }
+
+
+    #consulta {
+        width: 30vw;
+        height: 18vw;
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 80px;
+        height: 30px;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .formulario__turnos {
+        width: 60vw;
+    }
+
+    .campo__formulario--turno {
+        align-items: center;
+    }
+
+    .tabla__proximo--torneo {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, auto);
+        grid-template-areas:
+            "fecha categoria inscribir";
+        align-items: center;
+    }
+
+    .contenedor__tablas--torneos {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .contenedor__promociones {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        column-gap: 5px;
+        grid-template-areas:
+            "promo1 promo2 promo3"
+            "promo1 promo4 promo5";
+    }
+
+    .video__tip1 {
+        width: 650px;
+        height: 365px;
+    }
+
+    .video__tip2 {
+        width: 650px;
+        height: 365px;
+    }
+
+    .instalaciones {
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "canchas estacionamiento"
+            "asadores baños"
+            "barInfo barInfo";
+        column-gap: 10px;
+        justify-content: center;
+    }
+
+    .encabezados__clases {
+        width: 80vw;
+    }
+
+    .info__clase1 {
+        width: 80vw;
+    }
+
+    .info__clase2 {
+        width: 80vw;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .main__grid {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "titulo titulo"
+            "torneo noticia"
+            "promos promos"
+    }
+
+    .nav__list {
+        font-size: 1.2rem;
+    }
+
+    .img__article {
+        width: 50%;
+    }
+
+    .h1__bebas--white {
+        font-size: 4rem;
+    }
+
+    .text__roboto--backgrond {
+        font-size: 1.2rem;
+        max-width: 1024px;
+    }
+
+    .h2__rad {
+        font-size: 1.4rem;
+        width: 20vw;
+    }
+
+    .h2__rad--w{
+        font-size: 1.4rem;
+        width: 20vw;
+    }
+
+    .title__article {
+
+        font-size: 1.2rem;
+
+    }
+
+    .textArticle {
+        font-size: 1.2;
+    }
+
+    .text__roboto--white {
+        font-size: 1.2rem;
+    }
+
+    .text__roboto--whiteMenor {
+        font-size: 1.2rem;
+    }
+
+    .promos__row {
+        justify-content: space-evenly;
+    }
+
+    .icon {
+        width: 25px;
+    }
+
+    .flecha {
+        width: 45px;
+        height: 45px;
+    }
+
+    .formulario__consulta {
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
+    .labels__container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ubicacion {
+        width: 40%;
+        height: 52vh;
+    }
+
+    .campo__formulario--turno {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .tabla__proximo--torneo {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas:
+            "fecha categoria"
+            "inscribir  inscribir";
+        column-gap: 40px;
+    }
+
+    .torneos__finalizados {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "titulo titulo"
+            "art1 art2";
+    }
+
+    .contenedor__tablas--torneos {
+        justify-content: space-evenly;
+        row-gap: 10px;
+    }
+
+    .container__tips {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "text__tip1 video__tip1"
+            "video__tip2 text__tip2";
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    .video__tip1 {
+        width: 500px;
+        height: 281px;
+    }
+
+    .video__tip2 {
+        width: 500px;
+        height: 281px;
+    }
+
+    .h3__roboto--menor {
+        font-size: 1.05rem;
+    }
+
+    .text__roboto--center {
+        font-size: 1.05rem;
+    }
+
+    .img__menu {
+        width: 95%;
+    }
+
+    .contenedor__secciones--servicios {
+        grid-template-columns: repeat(2, 50vw);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "infoClases infoClases"
+            "instalaciones bar";
+    }
+
+    .instalaciones {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "canchas"
+            "estacionamiento"
+            "asadores"
+            "baños"
+            "barInfo";
+
+    }
+
+    .encabezados__clases {
+        width: 70vw;
+    }
+
+    .info__clase1 {
+        width: 70vw;
+    }
+
+    .info__clase2 {
+        width: 70vw;
+    }
+
+    .reglamento {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    
+    .titulo__contenedor {
+        height: 50vh;
+    }
+
+    .main__torneos {
+        display: grid;
+        grid-template-columns: 20vw, 80vs;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "titulo titulo"
+            "proximos finalizados"
+            "proximos finalizados";
+    }
+
+    .contenedor__tablas--torneos {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    #consulta {
+        width: 20vw;
+        height: 10vw;
+    }
+
+    .contenedor__promociones {
+        width: 60vw;
+        margin: 0 auto;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "promo1 promo1 promo2 promo2 promo3 promo3"
+            "promo4 promo4 promo4 promo5 promo5 promo5";
+    }
+
+    .video {
+        width: 640px;
+    }
+
+    .container__tips {
+        grid-template-columns: repeat(2, 30vw);
+        justify-content: center;
+    }
+
+    .video__tip1 {
+        width: 560px;
+        height: 315px;
+    }
+
+    .video__tip2 {
+        width: 560px;
+        height: 315px;
+    }
+
+    .encabezados__clases {
+        width: 20vw;
+    }
+
+    .info__clase1 {
+        width: 20vw;
+    }
+
+    .info__clase2 {
+        width: 20vw;
+    }
+
+    .img__menu {
+        width: 30vw;
+    }
+
+    .contenedor__secciones--servicios {
+        grid-template-columns: 30vw 40vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "infoClases instalaciones"
+            "bar bar";
+        align-items: center;
+    }
+
+    .instalaciones {
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "canchas canchas canchas"
+            "estacionamiento asadores baños"
+            "barInfo barInfo barInfo";
+
+    }
+
+    .contenedor__condiciones {
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "reglamento reservas""reglamento uso";
+        column-gap: 10px;
+
+    }
+
+    .reglamento {
+        margin-top: 0;
+    }
+}
