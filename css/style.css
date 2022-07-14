@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-h2 {
-    margin: 0;
-}
-
 a {
     text-decoration: none;
 }
@@ -26,6 +22,7 @@ body {
 
 nav.nav__flex ul li {
     padding-left: 5px 10px;
+    cursor: pointer;
 }
 
 .nav__flex {
@@ -41,6 +38,9 @@ nav.nav__flex ul li {
     box-shadow: 0 0 5px rgb(129, 129, 129);
     background-color: rgb(255, 255, 255);
     z-index: 50;
+    animation: headerUp;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
 }
 
 .nav__list {
@@ -53,7 +53,6 @@ nav.nav__flex ul li {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
-
 
 .boxgreen {
     background-color: lightgreen;
@@ -109,10 +108,11 @@ nav.nav__flex ul li {
     box-shadow: 0 0 5px rgb(117, 117, 117);
 }
 
-
 /* formatos de texto */
 
 .h1__bebas--white {
+    animation: appear;
+    animation-duration: 1.2s;
     font-size: 3rem;
     font-family: 'Bebas Neue', sans-serif;
     color: rgb(255, 255, 255);
@@ -277,6 +277,7 @@ nav.nav__flex ul li {
 
 .img__logo {
     height: 10vh;
+
 }
 
 .img__fit {
@@ -312,7 +313,7 @@ nav.nav__flex ul li {
 }
 
 .icon {
-    width: 18px;
+    width: 20px;
     /* max-width: ; */
 }
 
@@ -851,6 +852,50 @@ input,
     grid-area: uso;
 }
 
+/* animations */
+
+@keyframes headerUp {
+    from {
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animation__opacity--2s {
+    animation: appear;
+    animation-duration: 2s;
+}
+
+.animation__opacity--3s {
+    animation: appear;
+    animation-duration: 3s;
+}
+
+.animation__opacity--5s {
+    animation: appear;
+    animation-duration: 5s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* end animations */
 
 @media (min-width: 768px) {
 
@@ -1071,7 +1116,7 @@ input,
         width: 20vw;
     }
 
-    .h2__rad--w{
+    .h2__rad--w {
         font-size: 1.4rem;
         width: 20vw;
     }
@@ -1221,7 +1266,7 @@ input,
 
 @media (min-width: 1920px) {
 
-    
+
     .titulo__contenedor {
         height: 50vh;
     }
@@ -1321,4 +1366,62 @@ input,
     .reglamento {
         margin-top: 0;
     }
+
+    /* animations */
+
+    .img__logo:hover {
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+
+    ul.nav__list li:hover {
+        transform: scale(1.15);
+        color: rgb(255, 255, 255);
+        background-color: rgba(22, 136, 167, 0.692);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-radius: 3px;
+        transition: 0.2s;
+    }
+
+    ul.nav__list li a:hover {
+        color: rgb(255, 255, 255);
+        transition: 0.2s;
+    }
+
+    .bounceLeft {
+        animation: bounceLeft;
+        animation-duration: 1s;
+    }
+    
+    @keyframes bounceLeft {
+        from {
+            transform: translateX(-320px);
+            opacity: 0;
+        }
+    
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .bounceRigth {
+        animation: bounceRigth;
+        animation-duration: 1s;
+    }
+    
+    @keyframes bounceRigth {
+        from {
+            transform: translateX(320px);
+            opacity: 0;
+        }
+    
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    
+    }
+    /* end animations */
 }
