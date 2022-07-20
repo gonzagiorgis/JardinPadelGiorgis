@@ -6,34 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Página de Jardin Padel, centrada en bindar información respecto a las actividades desarrolladas y promocionar el club deportivo.">
+        content="Página de Jardin Padel, centrada en brindar información respecto a las actividades desarrolladas y promocionar el club deportivo.">
     <meta name="autor" content="Gonzalo Giorgis">
     <link rel="icon" href="../img/icon1.ico">
+    <!-- adding bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- personal stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Jardín Padel Club - Tips</title>
 </head>
 
 <body>
-    <header class="header__nav">
-        <nav class="nav__flex">
-            <a href="../index.html"><img class="img__logo" src="../img/logomin.jpeg"
-                    alt="Logotipo de Jardín Padel Club"></a>
-            <ul class="nav__list">
-                <li><a href="../index.html">Novedades</a></li>
-                <li><a href="turnos.html">Turnos</a></li>
-                <li><a href="promociones.html">Promociones</a></li>
-                <li><a href="torneos.html">Torneos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="tips.html">Tips</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white header__nav">
+            <div class="container-fluid" id="navContainer">
+                <a class="navbar-brand" href="../index.html"><img class="img__logo" src="../img/logomin.jpeg"
+                        alt="Logotipo de Jardín Padel Club"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/turnos.html">Turnos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/promociones.html">Promociones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/torneos.html">Torneos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../pages/tips.html">Tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <div class="titulo__contenedor" id="bienvenido">
             <h1 class="h1__bebas--white">Tips</h1>
         </div>
-        <section class="container__tips padding__5 animation__opacity--5s">
+        <section class="container__tips animation__opacity--3s">
             <div class="text__tip1 bounceLeft">
                 <h2 class="h2__rad">Prepara el grip</h2>
                 <p class="text__article--tips">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
@@ -42,8 +68,8 @@
                     dolores nobis delectus aspernatur
                     perspiciatis id illum labore alias?</p>
             </div>
-            <iframe class="video__tip1 bounceLeft" src="https://www.youtube.com/embed/gxUtewRD-4Y" title="YouTube video player"
-                frameborder="0"
+            <iframe class="video__tip1 bounceLeft" src="https://www.youtube.com/embed/gxUtewRD-4Y"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             <div class="text__tip2 bounceRigth">
@@ -55,15 +81,15 @@
                     dolores nobis delectus aspernatur
                     perspiciatis id illum labore alias?</p>
             </div>
-            <iframe class="video__tip2 bounceRigth" src="https://www.youtube.com/embed/Gg8Kpk_kBlw" title="YouTube video player"
-                frameborder="0"
+            <iframe class="video__tip2 bounceRigth" src="https://www.youtube.com/embed/Gg8Kpk_kBlw"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </section>
         <div class="contenedor__flecha"><a href="#bienvenido"><img class="flecha" src="../img/arrow_up.svg"
                     alt="Flecha para volver al inicio"></a></div>
     </main>
-    <footer class="footerFlex">
+    <footer class="footer__flex">
         <a class="img__logo--footer" href="../index.html"><img class="img__logo--footer" src="../img/logomin.jpeg"
                 alt="Logotipo de Jardín Padel Club"></a>
         <div class="footer__contenedor">
@@ -78,6 +104,8 @@
             </div>
         </div>
     </footer>
+    <!-- bs js -->
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
