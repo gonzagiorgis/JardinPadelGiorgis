@@ -715,15 +715,8 @@ footer.footer__flex {
       @media (min-width: 768px) {
         .main__torneos .torneos__proximos .contenedor__tablas--torneos {
           flex-direction: row;
-          justify-content: space-evenly; } }
-      @media (min-width: 1024px) {
-        .main__torneos .torneos__proximos .contenedor__tablas--torneos {
-          justify-content: space-evenly;
-          row-gap: 10px; } }
-      @media (min-width: 1920px) {
-        .main__torneos .torneos__proximos .contenedor__tablas--torneos {
-          flex-direction: column;
-          row-gap: 20px; } }
+          justify-content: center;
+          column-gap: 20px; } }
       .main__torneos .torneos__proximos .contenedor__tablas--torneos .tabla__proximo--torneo {
         display: grid;
         grid-template-rows: repeat(2, auto);

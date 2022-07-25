@@ -174,17 +174,8 @@
 
             @media (min-width: 768px) {
                 flex-direction: row;
-                justify-content: space-evenly;
-            }
-
-            @media (min-width: 1024px) {
-                justify-content: space-evenly;
-                row-gap: 10px;
-            }
-
-            @media (min-width: 1920px) {
-                flex-direction: column;
-                row-gap: 20px;
+                justify-content: center;
+                column-gap: 20px;
             }
 
             .tabla__proximo--torneo {
