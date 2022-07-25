@@ -1,0 +1,65 @@
+.animation__opacity--2s {
+    animation: appear;
+    animation-duration: 2s;
+}
+
+.animation__opacity--3s {
+    animation: appear;
+    animation-duration: 3s;
+}
+
+.animation__opacity--5s {
+    animation: appear;
+    animation-duration: 5s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1920px) {
+    .bounceLeft {
+        animation: bounceLeft;
+        animation-duration: 1s;
+    }
+
+    @keyframes bounceLeft {
+        from {
+            transform: translateX(-320px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .bounceRigth {
+        animation: bounceRigth;
+        animation-duration: 1s;
+    }
+
+    @keyframes bounceRigth {
+        from {
+            transform: translateX(320px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+    }
+}

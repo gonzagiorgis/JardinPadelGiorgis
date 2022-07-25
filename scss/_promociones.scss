@@ -1,0 +1,78 @@
+// clases comumes para promociones del index y de página promociones
+.img__promo {
+    width: 144px;
+    height: 179px;
+    margin: 5px;
+    box-shadow: $boxShadow;
+}
+
+.article__promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+
+    @media (min-width: 768px) {
+        justify-content: center;
+    }
+}
+
+.img__fit {
+    object-fit: cover;
+}
+
+// inicio grid página promociones
+.contenedor__promociones {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "promo1"
+        "promo2"
+        "promo3"
+        "promo4"
+        "promo5";
+    row-gap: 5px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        column-gap: 5px;
+        grid-template-areas:
+            "promo1 promo2 promo3"
+            "promo1 promo4 promo5";
+    }
+
+    @media (min-width: 1920px) {
+        width: 60vw;
+        margin: 0 auto;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "promo1 promo1 promo2 promo2 promo3 promo3"
+            "promo4 promo4 promo4 promo5 promo5 promo5";
+    }
+}
+
+.promo1 {
+    grid-area: promo1;
+}
+
+.promo2 {
+    grid-area: promo2;
+}
+
+.promo3 {
+    grid-area: promo3;
+}
+
+.promo4 {
+    grid-area: promo4;
+}
+
+.promo5 {
+    grid-area: promo5;
+}
+
+// fin grid página promociones

@@ -1,0 +1,24 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "Proyecto final del curso desarrollo web de la carrera Front End de Coder House\r Página del Club de Padel Jardín.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzagiorgis/JardinPadelGiorgis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzagiorgis/JardinPadelGiorgis/issues"
+  },
+  "homepage": "https://github.com/gonzagiorgis/JardinPadelGiorgis#readme",
+  "dependencies": {
+    "sass": "^1.54.0"
+  }  
+}
