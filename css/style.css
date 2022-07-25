@@ -512,14 +512,16 @@ p.text__article--tips {
     border-radius: 3px;
 }
 
-input,
 [type=date] {
     width: 140px;
 }
 
-input,
 [type=time] {
     width: 100px;
+}
+
+[type=radio]{
+    width: 20px;
 }
 
 .input__text:focus {
