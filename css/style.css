@@ -310,7 +310,6 @@ nav ul.navbar-nav {
       transform: scale(1.15);
       color: white;
       background-color: #1687a7;
-      -webkit-backdrop-filter: blur(10px);
       border-radius: 3px;
       transition: 0.2s; } }
 
