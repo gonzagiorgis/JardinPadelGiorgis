@@ -1,2 +1,3 @@
 *.log
 *.ai
+node_modules/

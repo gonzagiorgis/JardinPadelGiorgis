@@ -1,0 +1,172 @@
+// clase prpia de formulario página contacto
+.section__consulta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    @media (min-width: 1920px) {
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    .formulario__consulta {
+        font-size: 1rem;
+        width: 95vw;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            width: 40%;
+        }
+
+        @media (min-width: 1024px) {
+            width: -moz-fit-content;
+            width: fit-content;
+
+        }
+
+        .campo__formulario {
+            border: solid rgb(153, 153, 153) 1px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            border-radius: 3px;
+        }
+    }
+}
+
+// fin clase propia formularios página contacto
+
+// clase propia formulario página turnos
+.formulario__turnos {
+    font-family: $mainFont;
+    width: 95vw;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+        width: 60vw;
+    }
+
+    @media (min-width: 1920px) {
+        width: 30vw;
+    }
+
+    .campo__formulario--turno {
+        border: solid rgb(153, 153, 153) 1px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            width: 80%;
+            margin: 10px auto;
+        }
+    }
+}
+
+// fin clase propia formurlario página turnos
+
+// inicio clases comunes a todos los formularios
+.labels__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(95, 95, 95);
+    padding: 3px 5px;
+
+    @media (min-width: 768px) {
+        font-size: 1rem;
+        align-items: flex-start;
+    }
+
+    @media (min-width: 1024px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #consulta {
+        width: 80vw;
+        height: 20vh;
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid rgb(189, 189, 189);
+        border-radius: 3px;
+        border-color: rgb(22, 135, 167);
+
+        @media (min-width: 768px) {
+            width: 30vw;
+            height: 18vw;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 1920px) {
+            width: 20vw;
+            height: 10vw;
+        }
+    }
+
+    #duracion {
+        list-style: none;
+        width: 100%;
+    }
+
+    .input__text {
+        height: 1.4rem;
+        width: 250px;
+        font-size: 1rem;
+        padding: 5px;
+        outline: none;
+        border: 1px solid rgb(189, 189, 189);
+        border-radius: 3px;
+
+        &:focus {
+            border-color: rgb(22, 135, 167);
+        }
+
+        @media (min-width: 768px) {
+            height: 1.6rem;
+            font-size: 1rem;
+        }
+    }
+
+    [type=date] {
+        width: 140px;
+    }
+
+    [type=time] {
+        width: 100px;
+    }
+
+    [type=radio] {
+        width: 20px;
+    }
+}
+
+.buton__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+// fin clases comunes a todos los formularios

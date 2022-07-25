@@ -1,0 +1,109 @@
+.header__nav {
+    box-shadow: 0 0 5px rgb(129, 129, 129);
+    background-color: rgb(255, 255, 255);
+    animation: headerUp;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes headerUp {
+    from {
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav {
+    .img__logo {
+        height: 10vh;
+
+        @media (min-width: 1920px) {
+            height: 8vh;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 1s;
+            }
+        }
+    }
+
+    ul.navbar-nav {
+        font-family: $mainFont;
+        font-size: 1rem;
+
+        li {
+            a.nav-link.active {
+                color: $colorDark1;
+                font-weight: $textBold;
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                }
+
+                &::before {
+                    content: ">";
+                }
+
+                &::after {
+                    content: "<";
+                }
+
+                @media (min-width: 992px) {
+                    transform: scale(1.1);
+                }
+            }
+
+            a.nav-link {
+                padding: 0;
+                text-align: center;
+                padding: 0.3rem;
+
+                &:hover {
+                    @media (min-width: 1920px) {
+                        color: rgb(255, 255, 255);
+                        transition: 0.2s;
+                    }
+                }
+            }
+
+            &:hover {
+                @media (min-width: 1920px) {
+                    transform: scale(1.15);
+                    color: rgb(255, 255, 255);
+                    background-color: $colorDark2;
+                    -webkit-backdrop-filter: blur(10px);
+                    border-radius: 3px;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+
+    div {
+        button.navbar-toggler {
+            border: 2px solid $colorDark2;
+            box-shadow: $boxShadow;
+
+            &:focus {
+                background-color: $colorDark2;
+                box-shadow: $boxShadow;
+            }
+
+            span.navbar-toggler-icon {
+                background-image: url(../img/nav-toggler-grey.svg);
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        #navContainer {
+            width: fit-content;
+        }
+    }
+
+}
