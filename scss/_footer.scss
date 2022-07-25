@@ -7,13 +7,16 @@ footer.footer__flex {
     background-color: $colorDark2;
     justify-content: center;
 
+    @media (min-width: 768px) {
+        justify-content: space-around;
+    }
+
     .img__logo--footer {
         height: 10vh;
         display: none;
 
         @media (min-width: 768px) {
             display: block;
-            ;
         }
 
         @media (min-width: 1024px) {

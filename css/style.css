@@ -388,6 +388,9 @@ footer.footer__flex {
   flex-direction: row;
   background-color: #1687a7;
   justify-content: center; }
+  @media (min-width: 768px) {
+    footer.footer__flex {
+      justify-content: space-around; } }
   footer.footer__flex .img__logo--footer {
     height: 10vh;
     display: none; }
@@ -940,8 +943,8 @@ footer.footer__flex {
         width: 560px;
         height: 315px; } }
   .container__tips .video__tip2 {
-    width: 95vw;
-    height: auto;
+    width: 302px;
+    height: 170px;
     margin-bottom: 10px; }
     @media (min-width: 768px) {
       .container__tips .video__tip2 {
