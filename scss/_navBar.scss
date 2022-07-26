@@ -37,26 +37,6 @@ nav {
         font-size: 1rem;
 
         li {
-            a.nav-link.active {
-                color: $colorDark1;
-                font-weight: $textBold;
-
-                &:hover {
-                    color: rgb(255, 255, 255);
-                }
-
-                &::before {
-                    content: ">";
-                }
-
-                &::after {
-                    content: "<";
-                }
-
-                @media (min-width: 992px) {
-                    transform: scale(1.1);
-                }
-            }
 
             a.nav-link {
                 padding: 0;
@@ -67,17 +47,31 @@ nav {
                     @media (min-width: 1920px) {
                         color: rgb(255, 255, 255);
                         transition: 0.2s;
+                        transform: scale(1.1);
+                        background-color: $colorDark2;
+                        border-radius: 3px;
                     }
                 }
-            }
 
-            &:hover {
-                @media (min-width: 1920px) {
-                    transform: scale(1.15);
-                    color: rgb(255, 255, 255);
-                    background-color: $colorDark2;
-                    border-radius: 3px;
-                    transition: 0.2s;
+                &.active {
+                    color: $colorDark1;
+                    font-weight: $textBold;
+
+                    &:hover {
+                        color: rgb(255, 255, 255);
+                    }
+
+                    &::before {
+                        content: ">";
+                    }
+
+                    &::after {
+                        content: "<";
+                    }
+
+                    @media (min-width: 992px) {
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
