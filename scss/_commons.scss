@@ -6,7 +6,8 @@
 
 a {
     text-decoration: none;
-
+    color: inherit;
+    
     &:active {
         text-decoration: none;
         color: $colorDark1;
@@ -28,6 +29,27 @@ body {
 h3,
 p {
     margin-bottom: 0 !important;
+}
+
+.titulo__contenedor {
+    grid-area: titulo;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/aerearectangular.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @media (min-width: 768px) {
+        height: 90vh;
+    }
+
+    @media (min-width: 1920px) {
+        height: 50vh;
+    }
 }
 
 .lista__disco {
@@ -54,6 +76,31 @@ p {
         font-size: 1rem;
     }
 
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .img__article {
+        max-width: 97%;
+        box-shadow: $boxShadow;
+        flex-shrink: 0;
+
+        @media (min-width: 768px) {
+            width: 50vw;
+        }
+
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
+    }
 }
 
 .btn-green {

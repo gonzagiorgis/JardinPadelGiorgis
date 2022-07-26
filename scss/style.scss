@@ -25,27 +25,6 @@
     }
 }
 
-.titulo__contenedor {
-    grid-area: titulo;
-    display: flex;
-    flex-direction: column;
-    height: 85vh;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/aerearectangular.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-
-    @media (min-width: 768px) {
-        height: 90vh;
-    }
-
-    @media (min-width: 1920px) {
-        height: 50vh;
-    }
-}
-
 .torneo__container {
     grid-area: torneo;
     display: flex;
@@ -79,30 +58,6 @@
         }
     }
 
-}
-
-.article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: 768px) {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .img__article {
-        max-width: 97%;
-        box-shadow: $boxShadow;
-
-        @media (min-width: 768px) {
-            max-width: 50vw;
-        }
-
-        @media (min-width: 1024px) {
-            width: 50%;
-        }
-    }
 }
 
 // fin clases particulares del index

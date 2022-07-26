@@ -98,7 +98,7 @@
   }
 }
 
-.text__roboto--backgrond {
+.text__roboto--background {
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   color: rgb(255, 255, 255);
@@ -112,12 +112,12 @@
   backdrop-filter: blur(7px);
 }
 @media (min-width: 768px) {
-  .text__roboto--backgrond {
+  .text__roboto--background {
     font-size: 1.2rem;
   }
 }
 @media (min-width: 1024px) {
-  .text__roboto--backgrond {
+  .text__roboto--background {
     font-size: 1.2rem;
     max-width: 1024px;
   }
@@ -155,13 +155,11 @@
   color: rgb(246, 245, 245);
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
-  margin-top: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: 1px solid rgb(189, 189, 189);
   text-align: center;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding: 0.3rem;
 }
 @media (min-width: 1024px) {
   .title__article {
@@ -187,6 +185,7 @@
   font-family: "Roboto", sans-serif;
   padding: 5px;
   list-style: none;
+  line-height: 1.2em;
 }
 
 .text__article--tips {
@@ -241,6 +240,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:active {
   text-decoration: none;
@@ -262,6 +262,29 @@ body {
 h3,
 p {
   margin-bottom: 0 !important;
+}
+
+.titulo__contenedor {
+  grid-area: titulo;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/aerearectangular.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+@media (min-width: 768px) {
+  .titulo__contenedor {
+    height: 90vh;
+  }
+}
+@media (min-width: 1920px) {
+  .titulo__contenedor {
+    height: 50vh;
+  }
 }
 
 .lista__disco {
@@ -287,6 +310,33 @@ p {
     width: 80px;
     height: 30px;
     font-size: 1rem;
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .article {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.article .img__article {
+  max-width: 97%;
+  box-shadow: 0 0 5px rgb(117, 117, 117);
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .article .img__article {
+    width: 50vw;
+  }
+}
+@media (min-width: 1024px) {
+  .article .img__article {
+    width: 50%;
   }
 }
 
@@ -770,29 +820,6 @@ footer.footer__flex .icon {
   }
 }
 
-.titulo__contenedor {
-  grid-area: titulo;
-  display: flex;
-  flex-direction: column;
-  height: 85vh;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/aerearectangular.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-@media (min-width: 768px) {
-  .titulo__contenedor {
-    height: 90vh;
-  }
-}
-@media (min-width: 1920px) {
-  .titulo__contenedor {
-    height: 50vh;
-  }
-}
-
 .torneo__container {
   grid-area: torneo;
   display: flex;
@@ -827,30 +854,8 @@ footer.footer__flex .icon {
   }
 }
 
-.article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .article {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-.article .img__article {
-  max-width: 97%;
-  box-shadow: 0 0 5px rgb(117, 117, 117);
-}
-@media (min-width: 768px) {
-  .article .img__article {
-    max-width: 50vw;
-  }
-}
-@media (min-width: 1024px) {
-  .article .img__article {
-    width: 50%;
-  }
+.news__text {
+  overflow-y: auto;
 }
 
 .ubicacion {

@@ -89,7 +89,7 @@
     }
 }
 
-.text__roboto--backgrond {
+.text__roboto--background {
     font-family: $mainFont;
     font-size: 1.1rem;
     color: rgb(255, 255, 255);
@@ -142,13 +142,12 @@
     color: $colorLigth2;
     font-family: $mainFont;
     font-size: 1.2rem;
-    margin-top: 5px;
+    // margin-top: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom: 1px solid rgb(189, 189, 189);
     text-align: center;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
+    padding: 0.3rem;
 
     @media (min-width: 1024px) {
         font-size: 1.2rem;
@@ -173,6 +172,7 @@
     font-family: $mainFont;
     padding: 5px;
     list-style: none;
+    line-height: 1.2em;
 }
 
 .text__article--tips {
