@@ -854,10 +854,6 @@ footer.footer__flex .icon {
   }
 }
 
-.news__text {
-  overflow-y: auto;
-}
-
 .ubicacion {
   display: flex;
   flex-direction: column;
