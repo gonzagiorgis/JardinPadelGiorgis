@@ -858,7 +858,7 @@ footer.footer__flex .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 95vw;
   height: 50vh;
   padding: 5px;
   row-gap: 5px;
@@ -997,7 +997,7 @@ footer.footer__flex .icon {
 }
 @media (min-width: 1024px) {
   .contenedor__secciones--servicios {
-    grid-template-columns: repeat(2, 50vw);
+    grid-template-columns: repeat(2, 48vw);
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "infoClases infoClases" "instalaciones bar";
   }
