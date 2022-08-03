@@ -1,0 +1,14 @@
+@mixin texto ($family, $size, $color, $align: "") {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+
+    @if $align=="" {
+
+        text-align: left;
+    }
+
+    @else {
+        text-align: $align;
+    }
+};

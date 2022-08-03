@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Charis+SIL&family=Rajdhani:wght@400;500&family=Roboto:ital,wght@0,400;1,300&display=swap');
 
-$colorDark1: rgb(39, 102, 120);
-$colorDark2: rgb(22, 135, 167);
-$colorLigth1: rgb(211, 224, 234);
-$colorLigth2: rgb(246, 245, 245);
-$backColorH2: rgba(211, 224, 234, .7);
-$backColorTextOverImage: rgba(173, 216, 230, 0.7);
+$colores: (
+    'd1': rgb(39, 102, 120),
+    'd2': rgb(22, 135, 167),
+    'l1':rgb(211, 224, 234),
+    'l2': rgb(246, 245, 245),
+    'h2': rgba(211, 224, 234, .7),
+    'h2back': rgba(173, 216, 230, 0.7),
+    'w': rgb(255, 255, 255),
+    'b': rgb(27, 27, 27),
+    'g': rgb(117, 117, 117),
+    'gl': rgb(189, 189, 189),
+    'gd': rgb(105, 105, 105),
+    'gs': rgb(128, 128, 128),
+);
 
-$textBold:700;
-$textRegular:400;
-$textLight:300;
+$textBold: 700;
+$textRegular: 400;
+$textLight: 300;
 
 $mainFont: 'Roboto', sans-serif;
 $h1Font: 'Bebas Neue', sans-serif;
 $h2Font: 'Rajdhani', sans-serif;
 $fontCharis: 'Charis SIL', serif;
 
-$boxShadow: 0 0 5px rgb(117, 117, 117);
+$boxShadow: 0 0 5px map-get($map: $colores, $key: 'g');

@@ -3,8 +3,9 @@
 .h1__bebas--white {
   animation: appear;
   animation-duration: 1.2s;
-  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgb(117, 117, 117);
   font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
   color: rgb(255, 255, 255);
   text-align: center;
 }
@@ -23,11 +24,11 @@
   font-family: "Rajdhani", sans-serif;
   font-size: 1.2rem;
   color: rgb(39, 102, 120);
+  text-align: center;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(211, 224, 234, 0.7);
   box-shadow: 0 0 5px rgb(117, 117, 117);
-  text-align: center;
   width: 80vw;
   padding: 5px;
   display: block;
@@ -49,11 +50,11 @@
   font-family: "Rajdhani", sans-serif;
   font-size: 1.2rem;
   color: rgb(39, 102, 120);
+  text-align: center;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(211, 224, 234, 0.7);
   box-shadow: 0 0 5px rgb(117, 117, 117);
-  text-align: center;
   width: 100%;
   padding: 5px 0;
   display: block;
@@ -75,9 +76,9 @@
 .h3__roboto--background {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
-  font-weight: 400;
-  text-align: center;
   color: rgb(211, 224, 234);
+  text-align: center;
+  font-weight: 400;
   background-color: rgb(39, 102, 120);
   padding: 5px;
 }
@@ -85,9 +86,9 @@
 .h3__roboto--menor {
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
-  font-weight: 400;
-  text-align: center;
   color: rgb(211, 224, 234);
+  text-align: center;
+  font-weight: 400;
   background-color: rgb(39, 102, 120);
   padding: 5px;
   width: 25%;
@@ -127,6 +128,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 @media (min-width: 768px) {
   .text__roboto--white {
@@ -139,26 +141,15 @@
   }
 }
 
-.text__roboto--whiteMenor {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.7rem;
-  color: rgb(255, 255, 255);
-}
-@media (min-width: 768px) {
-  .text__roboto--whiteMenor {
-    font-size: 1rem;
-  }
-}
-
 .title__article {
-  background-color: rgb(39, 102, 120);
-  color: rgb(246, 245, 245);
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
+  color: rgb(246, 245, 245);
+  text-align: center;
+  background-color: rgb(39, 102, 120);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: 1px solid rgb(189, 189, 189);
-  text-align: center;
   padding: 0.3rem;
 }
 @media (min-width: 1024px) {
@@ -168,10 +159,11 @@
 }
 
 .title__promo {
-  background-color: rgb(39, 102, 120);
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: rgb(246, 245, 245);
-  font-family: "Roboto", sans-serif;
+  text-align: left;
+  background-color: rgb(39, 102, 120);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: 1px solid rgb(189, 189, 189);
@@ -179,10 +171,11 @@
 }
 
 .text__roboto--article {
-  background-color: rgb(22, 135, 167);
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   color: rgb(246, 245, 245);
-  font-family: "Roboto", sans-serif;
+  text-align: left;
+  background-color: rgb(22, 135, 167);
   padding: 5px;
   list-style: none;
   line-height: 1.2em;
@@ -196,20 +189,20 @@
   max-width: 90vw;
   margin-top: 5px;
   padding: 0 5px;
-  background-color: rgba(173, 216, 230, 0.877);
+  background-color: rgba(173, 216, 230, 0.7);
   border-radius: 10px;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 }
 
 .text__roboto--center {
-  background-color: rgb(22, 135, 167);
+  font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   color: rgb(246, 245, 245);
-  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: rgb(22, 135, 167);
   padding: 5px;
   list-style: none;
-  text-align: center;
   width: 25%;
 }
 @media (min-width: 1024px) {
@@ -221,23 +214,24 @@
 .text__roboto--black {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: rgb(0, 0, 0);
+  color: rgb(27, 27, 27);
+  text-align: left;
   padding: 5px;
 }
 
 .text__charis {
   font-family: "Charis SIL", serif;
   font-size: 1.4rem;
-  text-align: center;
   color: rgb(39, 102, 120);
+  text-align: center;
 }
 
 .titulo404 {
   font-family: "Charis SIL", serif;
   font-size: 2rem;
   color: rgb(39, 102, 120);
-  text-shadow: 0px 0px 2px rgb(128, 128, 128);
   text-align: right;
+  text-shadow: 0px 0px 2px rgb(128, 128, 128);
   padding: 10px;
 }
 
@@ -299,27 +293,17 @@ p {
 .lista__disco {
   list-style: disc;
   list-style-position: inside;
-  color: rgb(0, 0, 0);
+  color: rgb(27, 27, 27);
   padding-left: 10px;
 }
 
-.btn__orig {
+.btn__orig, .btn-grey, .btn-green {
   width: 80px;
   height: 30px;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
   border-radius: 3px;
-  text-align: center;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 3px rgb(129, 129, 129);
-}
-@media (min-width: 768px) {
-  .btn__orig {
-    width: 80px;
-    height: 30px;
-    font-size: 1rem;
-  }
+  box-shadow: 0 0 3px rgb(128, 128, 128);
 }
 
 .article {
@@ -350,10 +334,27 @@ p {
 }
 
 .btn-green {
-  color: white;
   border: none;
   background-color: rgb(71, 202, 73);
   border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .btn-green {
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-green {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
 .btn-green:hover {
   background-color: rgb(50, 168, 52);
@@ -364,10 +365,27 @@ p {
 }
 
 .btn-grey {
-  color: white;
   background-color: rgb(172, 172, 172);
   border: none;
   box-shadow: 1px 1px 5px rgb(128, 128, 128);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .btn-grey {
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-grey {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
 .btn-grey:hover {
   background-color: rgb(151, 151, 151);
@@ -395,7 +413,7 @@ p {
 }
 
 .header__nav {
-  box-shadow: 0 0 5px rgb(129, 129, 129);
+  box-shadow: 0 0 5px rgb(128, 128, 128);
   background-color: rgb(255, 255, 255);
   animation: headerUp;
   animation-duration: 0.5s;
@@ -415,7 +433,7 @@ p {
 nav .img__logo {
   height: 10vh;
 }
-@media (min-width: 1920px) {
+@media (min-width: 992px) {
   nav .img__logo {
     height: 8vh;
   }
@@ -433,7 +451,7 @@ nav ul.navbar-nav li a.nav-link {
   text-align: center;
   padding: 0.3rem;
 }
-@media (min-width: 1920px) {
+@media (min-width: 992px) {
   nav ul.navbar-nav li a.nav-link:hover {
     color: rgb(255, 255, 255);
     transition: 0.2s;
@@ -473,6 +491,7 @@ nav div button.navbar-toggler span.navbar-toggler-icon {
 }
 @media (min-width: 992px) {
   nav #navContainer {
+    width: -moz-fit-content;
     width: fit-content;
   }
 }
@@ -584,7 +603,6 @@ footer.footer__flex .footer__contenedor {
 }
 footer.footer__flex .footer__contenedor .siguenos {
   width: 100%;
-  text-align: center;
 }
 footer.footer__flex .footer__contenedor .whatsapp {
   display: flex;
@@ -889,27 +907,17 @@ p {
 .lista__disco {
   list-style: disc;
   list-style-position: inside;
-  color: rgb(0, 0, 0);
+  color: rgb(27, 27, 27);
   padding-left: 10px;
 }
 
-.btn__orig {
+.btn__orig, .btn-green, .btn-grey {
   width: 80px;
   height: 30px;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
   border-radius: 3px;
-  text-align: center;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 3px rgb(129, 129, 129);
-}
-@media (min-width: 768px) {
-  .btn__orig {
-    width: 80px;
-    height: 30px;
-    font-size: 1rem;
-  }
+  box-shadow: 0 0 3px rgb(128, 128, 128);
 }
 
 .article {
@@ -940,10 +948,27 @@ p {
 }
 
 .btn-green {
-  color: white;
   border: none;
   background-color: rgb(71, 202, 73);
   border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .btn-green {
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-green {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
 .btn-green:hover {
   background-color: rgb(50, 168, 52);
@@ -954,10 +979,27 @@ p {
 }
 
 .btn-grey {
-  color: white;
   background-color: rgb(172, 172, 172);
   border: none;
   box-shadow: 1px 1px 5px rgb(128, 128, 128);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .btn-grey {
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-grey {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
 .btn-grey:hover {
   background-color: rgb(151, 151, 151);
@@ -1042,7 +1084,7 @@ p {
   padding: 5px;
   row-gap: 5px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(128, 128, 128);
   margin-bottom: 5px;
 }
 @media (min-width: 768px) {
@@ -1131,7 +1173,7 @@ p {
 .main__torneos .torneos__proximos .contenedor__tablas--torneos .tabla__proximo--torneo .top-tabla {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border-bottom: 1px solid rgb(194, 194, 194);
+  border-bottom: 1px solid rgb(189, 189, 189);
 }
 .main__torneos .torneos__proximos .contenedor__tablas--torneos .tabla__proximo--torneo .bottom__tabla {
   text-align: center;
@@ -1317,6 +1359,7 @@ p {
 }
 @media (min-width: 1024px) {
   .menu {
+    width: -moz-fit-content;
     width: fit-content;
     overflow: none;
   }

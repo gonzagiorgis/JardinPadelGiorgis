@@ -1,10 +1,8 @@
 .h1__bebas--white {
     animation: appear;
     animation-duration: 1.2s;
-    font-size: 3rem;
-    font-family: $h1Font;
-    color: rgb(255, 255, 255);
-    text-align: center;
+    text-shadow: 2px 2px 5px map-get($map: $colores, $key: 'g');
+    @include texto($h1Font, 3rem, map-get($map: $colores, $key: 'w'), center);
 
     @media (min-width: 768px) {
         font-size: 3rem;
@@ -16,14 +14,11 @@
 }
 
 .h2__rad {
-    font-family: $h2Font;
-    font-size: 1.2rem;
-    color: rgb(39, 102, 120);
+    @include texto ($h2Font, 1.2rem, map-get($map: $colores, $key: 'd1'), center);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: $backColorH2;
+    background-color: map-get($map: $colores, $key: 'h2');
     box-shadow: $boxShadow;
-    text-align: center;
     width: 80vw;
     padding: 5px;
     display: block;
@@ -40,14 +35,11 @@
 }
 
 .h2__rad--w {
-    font-family: $h2Font;
-    font-size: 1.2rem;
-    color: $colorDark1;
+    @include texto($h2Font, 1.2rem, map-get($map: $colores, $key: 'd1'), center);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(211, 224, 234, .7);
+    background-color: map-get($map: $colores, $key: 'h2');
     box-shadow: $boxShadow;
-    text-align: center;
     width: 100%;
     padding: 5px 0;
     display: block;
@@ -65,22 +57,16 @@
 }
 
 .h3__roboto--background {
-    font-family: $mainFont;
-    font-size: 1.2rem;
+    @include texto($mainFont, 1.2rem, map-get($map: $colores, $key: 'l1'), center);
     font-weight: $textRegular;
-    text-align: center;
-    color: $colorLigth1;
-    background-color: $colorDark1;
+    background-color: map-get($map: $colores, $key: 'd1');
     padding: 5px;
 }
 
 .h3__roboto--menor {
-    font-family: $mainFont;
-    font-size: 0.8rem;
+    @include texto($mainFont, 0.8rem, map-get($map: $colores, $key: 'l1'), center);
     font-weight: $textRegular;
-    text-align: center;
-    color: $colorLigth1;
-    background-color: $colorDark1;
+    background-color: map-get($map: $colores, $key: 'd1');
     padding: 5px;
     width: 25%;
 
@@ -90,14 +76,11 @@
 }
 
 .text__roboto--background {
-    font-family: $mainFont;
-    font-size: 1.1rem;
-    color: rgb(255, 255, 255);
-    text-align: center;
+    @include texto($mainFont, 1.1rem, map-get($map: $colores, $key: 'w'), center);
     max-width: 90vw;
     margin-top: 5px;
     padding: 0 5px;
-    background-color: $backColorTextOverImage;
+    background-color: map-get($map: $colores, $key: 'h2back');
     border-radius: 10px;
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
@@ -114,9 +97,7 @@
 }
 
 .text__roboto--white {
-    font-family: $mainFont;
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'w'), center);
 
     @media (min-width: 768px) {
         font-size: 1rem;
@@ -127,26 +108,12 @@
     }
 }
 
-.text__roboto--whiteMenor {
-    font-family: $mainFont;
-    font-size: 0.7rem;
-    color: rgb(255, 255, 255);
-
-    @media (min-width: 768px) {
-        font-size: 1rem;
-    }
-}
-
 .title__article {
-    background-color: $colorDark1;
-    color: $colorLigth2;
-    font-family: $mainFont;
-    font-size: 1.2rem;
-    // margin-top: 5px;
+    @include texto($mainFont, 1.2rem, map-get($map: $colores, $key: 'l2'), center);
+    background-color: map-get($map: $colores, $key: 'd1');
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom: 1px solid rgb(189, 189, 189);
-    text-align: center;
+    border-bottom: 1px solid map-get($map: $colores, $key: 'gl');
     padding: 0.3rem;
 
     @media (min-width: 1024px) {
@@ -155,48 +122,38 @@
 }
 
 .title__promo {
-    background-color: $colorDark1;
-    font-size: 1rem;
-    color: $colorLigth2;
-    font-family: $mainFont;
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'l2'), );
+    background-color: map-get($map: $colores, $key: 'd1');
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom: 1px solid rgb(189, 189, 189);
+    border-bottom: 1px solid map-get($map: $colores, $key: 'gl');
     padding: 5px;
 }
 
 .text__roboto--article {
-    background-color: $colorDark2;
-    font-size: 1rem;
-    color: $colorLigth2;
-    font-family: $mainFont;
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'l2'), );
+    background-color: map-get($map: $colores, $key: 'd2');
     padding: 5px;
     list-style: none;
     line-height: 1.2em;
 }
 
 .text__article--tips {
-    font-family: $mainFont;
-    font-size: 1rem;
-    color: rgb(105, 105, 105);
-    text-align: center;
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'gd'), center);
     max-width: 90vw;
     margin-top: 5px;
     padding: 0 5px;
-    background-color: rgba(173, 216, 230, 0.877);
+    background-color: map-get($map: $colores, $key: 'h2back');
     border-radius: 10px;
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
 }
 
 .text__roboto--center {
-    background-color: $colorDark2;
-    font-size: 0.8rem;
-    color: $colorLigth2;
-    font-family: $mainFont;
+    @include texto($mainFont, 0.8rem, map-get($map: $colores, $key: 'l2'), center);
+    background-color: map-get($map: $colores, $key: 'd2');
     padding: 5px;
     list-style: none;
-    text-align: center;
     width: 25%;
 
     @media (min-width: 1024px) {
@@ -205,25 +162,17 @@
 }
 
 .text__roboto--black {
-    font-family: $mainFont;
-    font-size: 1rem;
-    color: rgb(0, 0, 0);
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'b'), );
     padding: 5px;
 
 }
 
 .text__charis {
-    font-family: $fontCharis;
-    font-size: 1.4rem;
-    text-align: center;
-    color: $colorDark1;
+    @include texto($fontCharis, 1.4rem, map-get($map: $colores, $key: 'd1'), center);
 }
 
-.titulo404{
-    font-family: $fontCharis;
-    font-size: 2rem;
-    color: $colorDark1;
-    text-shadow: 0px 0px 2px rgb(128, 128, 128);
-    text-align: right;
+.titulo404 {
+    @include texto($fontCharis, 2rem, map-get($map: $colores, $key: 'd1'), right);
+    text-shadow: 0px 0px 2px map-get($map: $colores, $key: 'gs');
     padding: 10px;
 }

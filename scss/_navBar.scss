@@ -1,6 +1,6 @@
 .header__nav {
-    box-shadow: 0 0 5px rgb(129, 129, 129);
-    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px map-get($map: $colores, $key: 'gs');
+    background-color: map-get($map: $colores, $key: 'w');
     animation: headerUp;
     animation-duration: .5s;
     animation-timing-function: ease-out;
@@ -22,7 +22,7 @@ nav {
     .img__logo {
         height: 10vh;
 
-        @media (min-width: 1920px) {
+        @media (min-width: 992px) {
             height: 8vh;
 
             &:hover {
@@ -44,21 +44,21 @@ nav {
                 padding: 0.3rem;
 
                 &:hover {
-                    @media (min-width: 1920px) {
-                        color: rgb(255, 255, 255);
+                    @media (min-width: 992px) {
+                        color: map-get($map: $colores, $key: 'w');
                         transition: 0.2s;
                         transform: scale(1.1);
-                        background-color: $colorDark2;
+                        background-color: map-get($map: $colores, $key: 'd2');
                         border-radius: 3px;
                     }
                 }
 
                 &.active {
-                    color: $colorDark1;
+                    color: map-get($map: $colores, $key: 'd1');
                     font-weight: $textBold;
 
                     &:hover {
-                        color: rgb(255, 255, 255);
+                        color: map-get($map: $colores, $key: 'w');
                     }
 
                     &::before {
@@ -79,11 +79,11 @@ nav {
 
     div {
         button.navbar-toggler {
-            border: 2px solid $colorDark2;
+            border: 2px solid map-get($map: $colores, $key: 'd2');
             box-shadow: $boxShadow;
 
             &:focus {
-                background-color: $colorDark2;
+                background-color: map-get($map: $colores, $key: 'd2');
                 box-shadow: $boxShadow;
             }
 
@@ -95,6 +95,7 @@ nav {
 
     @media (min-width: 992px) {
         #navContainer {
+            width: -moz-fit-content;
             width: fit-content;
         }
     }

@@ -10,12 +10,12 @@ a {
 
     &:active {
         text-decoration: none;
-        color: $colorDark1;
+        color: map-get($map: $colores, $key: 'd1');
     }
 }
 
 body {
-    background-color: rgb(246, 245, 245);
+    background-color: map-get($map: $colores, $key: 'l2');
 }
 
 .padding__5 {
@@ -55,27 +55,17 @@ p {
 .lista__disco {
     list-style: disc;
     list-style-position: inside;
-    color: rgb(0, 0%, 0%);
+    color: map-get($map: $colores, $key: 'b');
     padding-left: 10px;
 }
 
 .btn__orig {
     width: 80px;
     height: 30px;
-    font-size: 1rem;
-    font-family: $mainFont;
     border-radius: 3px;
-    text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 3px rgb(129, 129, 129);
-
-    @media (min-width: 768px) {
-        width: 80px;
-        height: 30px;
-        font-size: 1rem;
-    }
-
+    box-shadow: 0 0 3px map-get($map: $colores, $key: 'gs');
 }
 
 .article {
@@ -104,10 +94,24 @@ p {
 }
 
 .btn-green {
-    color: white;
+    @extend .btn__orig;
     border: none;
     background-color: rgb(71, 202, 73);
     border: none;
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'w'), center);
+
+    @media (min-width: 768px) {
+        width: 80px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+        width: 100px;
+        height: 40px;
+        font-size: 1.2rem;
+
+    }
 
     &:hover {
         background-color: rgb(50, 168, 52);
@@ -120,10 +124,24 @@ p {
 }
 
 .btn-grey {
-    color: white;
+    @extend .btn__orig;
     background-color: rgb(172, 172, 172);
     border: none;
     box-shadow: 1px 1px 5px rgb(128, 128, 128);
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'w'), center);
+
+    @media (min-width: 768px) {
+        width: 80px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+        width: 100px;
+        height: 40px;
+        font-size: 1.2rem;
+
+    }
 
     &:hover {
         background-color: rgb(151, 151, 151);
@@ -136,7 +154,7 @@ p {
 }
 
 .error404 {
-    background-color: $colorLigth1;
+    background-color: map-get($map: $colores, $key: 'l1');
     display: flex;
     flex-direction: column;
     align-items: center;

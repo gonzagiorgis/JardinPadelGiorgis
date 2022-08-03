@@ -4,7 +4,7 @@ footer.footer__flex {
     height: fit-content;
     font-size: 0;
     flex-direction: row;
-    background-color: $colorDark2;
+    background-color: map-get($map: $colores, $key: 'd2');
     justify-content: center;
 
     @media (min-width: 768px) {
@@ -35,7 +35,6 @@ footer.footer__flex {
 
         .siguenos {
             width: 100%;
-            text-align: center;
         }
 
         .whatsapp {
