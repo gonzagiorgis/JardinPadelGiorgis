@@ -7,7 +7,7 @@
 a {
     text-decoration: none;
     color: inherit;
-    
+
     &:active {
         text-decoration: none;
         color: $colorDark1;
@@ -135,31 +135,21 @@ p {
     }
 }
 
-// div.encabezados__clases h3,
-// p {
-//     margin-bottom: 0;
-// }
+.error404 {
+    background-color: $colorLigth1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 
-// h3.h3__roboto--background {
-//     margin-bottom: 0;
-// }
+    .text__roboto--black {
+        text-align: center;
+    }
 
-// p.text__roboto--white {
-//     margin-bottom: 0;
-// }
-
-// p.text__roboto--whiteMenor {
-//     margin-bottom: 0;
-// }
-
-// h3.title__article {
-//     margin-bottom: 0;
-// }
-
-// h3.title__promo {
-//     margin-bottom: 0;
-// }
-
-// p.text__article--tips {
-//     margin-bottom: 0;
-// }
+    .img404 {
+        margin-top: 30vh;
+        box-shadow: $boxShadow;
+        max-width: 95vw;
+        border-radius: 5px;
+    }
+}

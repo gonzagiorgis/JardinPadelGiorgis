@@ -232,6 +232,15 @@
   color: rgb(39, 102, 120);
 }
 
+.titulo404 {
+  font-family: "Charis SIL", serif;
+  font-size: 2rem;
+  color: rgb(39, 102, 120);
+  text-shadow: 0px 0px 2px rgb(128, 128, 128);
+  text-align: right;
+  padding: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -366,6 +375,23 @@ p {
 }
 .btn-grey:active {
   background-color: rgb(87, 87, 87);
+}
+
+.error404 {
+  background-color: rgb(211, 224, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.error404 .text__roboto--black {
+  text-align: center;
+}
+.error404 .img404 {
+  margin-top: 30vh;
+  box-shadow: 0 0 5px rgb(117, 117, 117);
+  max-width: 95vw;
+  border-radius: 5px;
 }
 
 .header__nav {
@@ -805,6 +831,159 @@ footer.footer__flex .icon {
     }
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:active {
+  text-decoration: none;
+  color: rgb(39, 102, 120);
+}
+
+body {
+  background-color: rgb(246, 245, 245);
+}
+
+.padding__5 {
+  padding: 5px;
+}
+
+.box__shadow {
+  box-shadow: 0 0 5px rgb(117, 117, 117);
+}
+
+h3,
+p {
+  margin-bottom: 0 !important;
+}
+
+.titulo__contenedor {
+  grid-area: titulo;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/aerearectangular.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+@media (min-width: 768px) {
+  .titulo__contenedor {
+    height: 90vh;
+  }
+}
+@media (min-width: 1920px) {
+  .titulo__contenedor {
+    height: 50vh;
+  }
+}
+
+.lista__disco {
+  list-style: disc;
+  list-style-position: inside;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+}
+
+.btn__orig {
+  width: 80px;
+  height: 30px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 3px rgb(129, 129, 129);
+}
+@media (min-width: 768px) {
+  .btn__orig {
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .article {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.article .img__article {
+  max-width: 97%;
+  box-shadow: 0 0 5px rgb(117, 117, 117);
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .article .img__article {
+    width: 50vw;
+  }
+}
+@media (min-width: 1024px) {
+  .article .img__article {
+    width: 50%;
+  }
+}
+
+.btn-green {
+  color: white;
+  border: none;
+  background-color: rgb(71, 202, 73);
+  border: none;
+}
+.btn-green:hover {
+  background-color: rgb(50, 168, 52);
+  cursor: pointer;
+}
+.btn-green:active {
+  background-color: rgb(31, 119, 32);
+}
+
+.btn-grey {
+  color: white;
+  background-color: rgb(172, 172, 172);
+  border: none;
+  box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
+.btn-grey:hover {
+  background-color: rgb(151, 151, 151);
+  cursor: pointer;
+}
+.btn-grey:active {
+  background-color: rgb(87, 87, 87);
+}
+
+.error404 {
+  background-color: rgb(211, 224, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.error404 .text__roboto--black {
+  text-align: center;
+}
+.error404 .img404 {
+  margin-top: 30vh;
+  box-shadow: 0 0 5px rgb(117, 117, 117);
+  max-width: 95vw;
+  border-radius: 5px;
+}
+
 .main__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -995,13 +1174,6 @@ footer.footer__flex .icon {
   row-gap: 10px;
   justify-content: center;
 }
-@media (min-width: 1024px) {
-  .contenedor__secciones--servicios {
-    grid-template-columns: repeat(2, 48vw);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "infoClases infoClases" "instalaciones bar";
-  }
-}
 @media (min-width: 1920px) {
   .contenedor__secciones--servicios {
     grid-template-columns: 30vw 40vw;
@@ -1111,13 +1283,6 @@ footer.footer__flex .icon {
     justify-content: center;
   }
 }
-@media (min-width: 1024px) {
-  .contenedor__secciones--servicios .contenedor__instalaciones .instalaciones {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "canchas" "estacionamiento" "asadores" "baños" "barInfo";
-  }
-}
 @media (min-width: 1920px) {
   .contenedor__secciones--servicios .contenedor__instalaciones .instalaciones {
     grid-template-columns: repeat(3, 30%);
@@ -1146,17 +1311,32 @@ footer.footer__flex .icon {
   box-shadow: 0 0 5px rgb(117, 117, 117);
 }
 
-.img__menu {
+.menu {
   width: 95vw;
+  overflow: auto;
 }
 @media (min-width: 1024px) {
-  .img__menu {
-    width: 95%;
+  .menu {
+    width: fit-content;
+    overflow: none;
   }
 }
 @media (min-width: 1920px) {
-  .img__menu {
-    width: 30vw;
+  .menu {
+    width: 60vw;
+  }
+}
+.menu .img__menu {
+  object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .menu .img__menu {
+    width: 95vw;
+  }
+}
+@media (min-width: 1920px) {
+  .menu .img__menu {
+    width: 60vw;
   }
 }
 

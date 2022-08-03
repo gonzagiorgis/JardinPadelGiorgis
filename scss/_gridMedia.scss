@@ -1,0 +1,558 @@
+@import "_commons";
+// inicio clases particulares del index
+.main__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "titulo""torneo""noticia""promos";
+    row-gap: 10px;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "titulo titulo"
+            "torneo noticia"
+            "promos promos"
+    }
+}
+
+.torneo__container {
+    grid-area: torneo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticia__container {
+    grid-area: noticia;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promos__container {
+    grid-area: promos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+        .promos__row {
+            width: 95vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            @media (min-width: 1024px) {
+                justify-content: space-evenly;
+            }
+        }
+    }
+
+}
+
+// fin clases particulares del index
+
+// incio clase particular de página contacto
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+    height: 50vh;
+    padding: 5px;
+    row-gap: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(117, 117, 117);
+    margin-bottom: 5px;
+
+    @media (min-width: 768px) {
+        width: 55%;
+        height: 62vh;
+    }
+
+    @media (min-width: 1024px) {
+        width: 40%;
+        height: 52vh;
+    }
+}
+
+// fin clases particulares página contacto
+
+// incio clases particulares página torneos
+
+.main__torneos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "titulo"
+        "proximos"
+        "finalizados";
+
+    @media (min-width: 1920px) {
+        .main__torneos {
+            display: grid;
+            grid-template-columns: 20vw, 80vs;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:
+                "titulo titulo"
+                "proximos finalizados"
+                "proximos finalizados";
+        }
+    }
+
+    .torneos__proximos {
+        grid-area: proximos;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        padding: 0 5px 20px 5px;
+
+        .contenedor__tablas--torneos {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            row-gap: 10px;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                justify-content: center;
+                column-gap: 20px;
+            }
+
+            .tabla__proximo--torneo {
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                grid-template-columns: repeat(2, auto);
+                grid-template-areas:
+                    "fecha categoria"
+                    "inscribir inscribir";
+                column-gap: 10px;
+                justify-items: center;
+                row-gap: 10px;
+
+                @media (min-width: 768px) {
+                    grid-template-rows: auto;
+                    grid-template-columns: repeat(3, auto);
+                    grid-template-areas:
+                        "fecha categoria inscribir";
+                    align-items: center;
+                }
+
+                @media (min-width: 1024px) {
+                    grid-template-rows: repeat(2, auto);
+                    grid-template-columns: repeat(2, auto);
+                    grid-template-areas:
+                        "fecha categoria"
+                        "inscribir  inscribir";
+                    column-gap: 40px;
+                }
+
+                .contenedor__fecha {
+                    grid-area: fecha;
+                }
+
+                .contenedor__categoria {
+                    grid-area: categoria;
+                }
+
+                .contenedor__inscribir {
+                    grid-area: inscribir;
+                }
+
+                .top-tabla {
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border-bottom: 1px solid rgb(194, 194, 194);
+                }
+
+                .bottom__tabla {
+                    text-align: center;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .torneos__finalizados {
+        grid-area: finalizados;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "titulo"
+            "art1"
+            "art2";
+        justify-items: center;
+        row-gap: 10px;
+        padding: 0 5px 20px 5px;
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas:
+                "titulo titulo"
+                "art1 art2";
+        }
+
+        .titulo__torneos--finalizados {
+            grid-area: titulo;
+        }
+
+        .art1__finalizados {
+            grid-area: art1;
+        }
+
+        .art2__finalizados {
+            grid-area: art2;
+        }
+    }
+}
+
+// fin clases particulares página torneos
+
+// incio clases particulares página servicios
+.contenedor__secciones--servicios {
+    display: grid;
+    grid-template-columns: 95vw;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "infoClases"
+        "instalaciones"
+        "bar";
+    row-gap: 10px;
+    justify-content: center;
+
+    @media (min-width: 1920px) {
+        grid-template-columns: 30vw 40vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "infoClases instalaciones"
+            "bar bar";
+        align-items: center;
+    }
+
+    .info__clases {
+        grid-area: infoClases;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0;
+        row-gap: 10px;
+
+        .encabezados__clases {
+            display: flex;
+            text-align: center;
+            width: 90vw;
+            justify-content: center;
+
+            @media (min-width: 768px) {
+                width: 80vw;
+            }
+
+            @media (min-width: 1024px) {
+                width: 70vw;
+            }
+
+            @media (min-width: 1920px) {
+                width: 20vw;
+            }
+
+        }
+
+        .info__clase1 {
+            display: flex;
+            width: 90vw;
+
+            @media (min-width: 768px) {
+                width: 80vw;
+            }
+
+            @media (min-width: 1024px) {
+                width: 70vw;
+            }
+
+            @media (min-width: 1920px) {
+                width: 20vw;
+            }
+        }
+
+        .info__clase2 {
+            display: flex;
+            margin-bottom: 5px;
+            width: 90vw;
+
+            @media (min-width: 768px) {
+                width: 80vw;
+            }
+
+            @media (min-width: 1024px) {
+                width: 70vw;
+            }
+
+            @media (min-width: 1920px) {
+                width: 20vw;
+            }
+        }
+
+    }
+
+    .bar {
+        grid-area: bar;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        padding: 5px 10px;
+    }
+
+    .contenedor__instalaciones {
+        grid-area: instalaciones;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+
+        .instalaciones {
+            display: grid;
+            grid-template-columns: 95vw;
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas:
+                "titulo"
+                "canchas"
+                "estacionamiento"
+                "barInfo"
+                "asadores"
+                "baños";
+            padding: 5px 5px;
+            justify-items: center;
+            row-gap: 10px;
+
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 40vw);
+                grid-template-rows: repeat(3, auto);
+                grid-template-areas:
+                    "canchas estacionamiento"
+                    "asadores baños"
+                    "barInfo barInfo";
+                column-gap: 10px;
+                justify-content: center;
+            }
+
+            @media (min-width: 1920px) {
+                grid-template-columns: repeat(3, 30%);
+                grid-template-rows: repeat(3, auto);
+                grid-template-areas:
+                    "canchas canchas canchas"
+                    "estacionamiento asadores baños"
+                    "barInfo barInfo barInfo";
+            }
+
+            .canchas {
+                grid-area: canchas;
+                box-shadow: 0 0 5px rgb(117, 117, 117);
+            }
+
+            .estacionamiento {
+                grid-area: estacionamiento;
+                box-shadow: 0 0 5px rgb(117, 117, 117);
+            }
+
+            .bar__info {
+                grid-area: barInfo;
+                box-shadow: 0 0 5px rgb(117, 117, 117);
+            }
+
+            .baños {
+                grid-area: baños;
+                box-shadow: 0 0 5px rgb(117, 117, 117);
+            }
+
+            .asadores {
+                grid-area: asadores;
+                box-shadow: 0 0 5px rgb(117, 117, 117);
+            }
+        }
+    }
+}
+
+.menu {
+    width: 95vw;
+    overflow: auto;
+
+    @media (min-width: 1024px) {
+        width: fit-content;
+        overflow: none;
+    }
+
+    @media (min-width: 1920px) {
+        width: 60vw;
+    }
+
+    .img__menu {
+        object-fit: cover;
+
+        @media (min-width: 1024px) {
+            width: 95vw
+        }
+
+        @media (min-width: 1920px) {
+            width: 60vw;
+        }
+    }
+}
+
+
+// fin clases particulares página servicios
+
+// incio clases particulares página tips
+.container__tips {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+    grid-template-areas:
+        "text__tip1"
+        "video__tip1"
+        "text__tip2"
+        "video__tip2";
+    padding: 5px 5px 10px 5px;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "text__tip1 video__tip1"
+            "video__tip2 text__tip2";
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    @media (min-width: 1920px) {
+        grid-template-columns: repeat(2, 30vw);
+        justify-content: center;
+    }
+
+    .video__tip1 {
+        width: 302px;
+        height: 170px;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            width: 650px;
+            height: 365px;
+        }
+
+        @media (min-width: 1024px) {
+            width: 500px;
+            height: 281px;
+        }
+
+        @media (min-width: 1920px) {
+            width: 560px;
+            height: 315px;
+        }
+    }
+
+    .video__tip2 {
+        width: 302px;
+        height: 170px;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            width: 650px;
+            height: 365px;
+        }
+
+        @media (min-width: 1024px) {
+            width: 500px;
+            height: 281px;
+        }
+
+        @media (min-width: 1920px) {
+            width: 560px;
+            height: 315px;
+        }
+    }
+
+    .text__tip1 {
+        grid-area: text__tip1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        padding: 5px;
+    }
+
+    .text__tip2 {
+        grid-area: text__tip2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        padding: 5px;
+    }
+
+
+}
+
+// fin clases particulares página tips
+
+// inicio clases particulares terminos y condiciones
+.contenedor__condiciones {
+    display: grid;
+    grid-template-columns: 95vw;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "reglamento""reservas""uso";
+    row-gap: 15px;
+    padding-bottom: 20px;
+    justify-content: center;
+
+    @media (min-width: 1920px) {
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "reglamento reservas""reglamento uso";
+        column-gap: 10px;
+    }
+
+    .reservas {
+        grid-area: reservas;
+    }
+
+    .reglamento {
+        grid-area: reglamento;
+    }
+
+    .uso__instalaciones {
+        grid-area: uso;
+    }
+}
+
+// fin clases particulares terminos y condiciones
+// bottom arrow
+.contenedor__flecha {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 60;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+
+    .flecha {
+        width: 30px;
+
+        @media (min-width: 1024px) {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
