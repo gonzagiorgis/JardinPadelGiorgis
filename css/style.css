@@ -25,10 +25,7 @@
   font-size: 1.2rem;
   color: rgb(39, 102, 120);
   text-align: center;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background-color: rgba(211, 224, 234, 0.7);
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0px 15px 10px -15px rgb(39, 102, 120);
   width: 80vw;
   padding: 5px;
   display: block;
@@ -42,7 +39,7 @@
 @media (min-width: 1024px) {
   .h2__rad {
     font-size: 1.4rem;
-    width: 20vw;
+    width: max-content;
   }
 }
 
@@ -54,7 +51,7 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(211, 224, 234, 0.7);
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
   width: 100%;
   padding: 5px 0;
   display: block;
@@ -79,7 +76,6 @@
   color: rgb(211, 224, 234);
   text-align: center;
   font-weight: 400;
-  background-color: rgb(39, 102, 120);
   padding: 5px;
 }
 
@@ -146,9 +142,6 @@
   font-size: 1.2rem;
   color: rgb(246, 245, 245);
   text-align: center;
-  background-color: rgb(39, 102, 120);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   border-bottom: 1px solid rgb(189, 189, 189);
   padding: 0.3rem;
 }
@@ -161,21 +154,32 @@
 .title__promo {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: rgb(246, 245, 245);
+  color: rgb(39, 102, 120);
   text-align: left;
-  background-color: rgb(39, 102, 120);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: 1px solid rgb(189, 189, 189);
+  border-bottom: 1px solid rgb(39, 102, 120);
   padding: 5px;
 }
 
 .text__roboto--article {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: rgb(246, 245, 245);
+  color: rgb(211, 224, 234);
   text-align: left;
-  background-color: rgb(22, 135, 167);
+  padding: 5px 5px 5px 20px;
+  list-style: none;
+  line-height: 1.2em;
+}
+@media (min-width: 768px) {
+  .text__roboto--article {
+    text-align: right;
+  }
+}
+
+.text__robo--promo {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: rgb(39, 102, 120);
+  text-align: left;
   padding: 5px;
   list-style: none;
   line-height: 1.2em;
@@ -184,13 +188,13 @@
 .text__article--tips {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: rgb(105, 105, 105);
+  color: rgb(246, 245, 245);
   text-align: center;
   max-width: 90vw;
   margin-top: 5px;
   padding: 0 5px;
-  background-color: rgba(173, 216, 230, 0.7);
-  border-radius: 10px;
+  background-color: rgb(39, 102, 120);
+  border-radius: 5px;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 }
@@ -259,7 +263,7 @@ body {
 }
 
 .box__shadow {
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
 }
 
 h3,
@@ -310,6 +314,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(39, 102, 120);
 }
 @media (min-width: 768px) {
   .article {
@@ -318,9 +323,9 @@ p {
   }
 }
 .article .img__article {
-  max-width: 97%;
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  width: 100%;
   flex-shrink: 0;
+  object-fit: cover;
 }
 @media (min-width: 768px) {
   .article .img__article {
@@ -341,6 +346,7 @@ p {
   font-size: 1rem;
   color: rgb(255, 255, 255);
   text-align: center;
+  margin: 0 10px;
 }
 @media (min-width: 768px) {
   .btn-green {
@@ -407,7 +413,7 @@ p {
 }
 .error404 .img404 {
   margin-top: 30vh;
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
   max-width: 95vw;
   border-radius: 5px;
 }
@@ -480,11 +486,11 @@ nav ul.navbar-nav li a.nav-link.active::after {
 }
 nav div button.navbar-toggler {
   border: 2px solid rgb(22, 135, 167);
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
 }
 nav div button.navbar-toggler:focus {
   background-color: rgb(22, 135, 167);
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
 }
 nav div button.navbar-toggler span.navbar-toggler-icon {
   background-image: url(../img/nav-toggler-grey.svg);
@@ -500,7 +506,7 @@ nav div button.navbar-toggler span.navbar-toggler-icon {
   width: 144px;
   height: 179px;
   margin: 5px;
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
 }
 
 .article__promo {
@@ -873,7 +879,7 @@ body {
 }
 
 .box__shadow {
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
 }
 
 h3,
@@ -924,6 +930,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(39, 102, 120);
 }
 @media (min-width: 768px) {
   .article {
@@ -932,9 +939,9 @@ p {
   }
 }
 .article .img__article {
-  max-width: 97%;
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  width: 100%;
   flex-shrink: 0;
+  object-fit: cover;
 }
 @media (min-width: 768px) {
   .article .img__article {
@@ -955,6 +962,7 @@ p {
   font-size: 1rem;
   color: rgb(255, 255, 255);
   text-align: center;
+  margin: 0 10px;
 }
 @media (min-width: 768px) {
   .btn-green {
@@ -1021,7 +1029,7 @@ p {
 }
 .error404 .img404 {
   margin-top: 30vh;
-  box-shadow: 0 0 5px rgb(117, 117, 117);
+  box-shadow: 0 0 5px rgb(211, 224, 234);
   max-width: 95vw;
   border-radius: 5px;
 }
@@ -1047,12 +1055,22 @@ p {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .torneo__container :nth-child(2) {
+    height: 100%;
+  }
+}
 
 .noticia__container {
   grid-area: noticia;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .noticia__container :nth-child(2) {
+    height: 100%;
+  }
 }
 
 .promos__container {
@@ -1141,9 +1159,11 @@ p {
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(2, auto);
   grid-template-areas: "fecha categoria" "inscribir inscribir";
-  column-gap: 10px;
   justify-items: center;
   row-gap: 10px;
+  padding: 0 0 8px 0;
+  background-color: rgb(39, 102, 120);
+  border-radius: 5px;
 }
 @media (min-width: 768px) {
   .main__torneos .torneos__proximos .contenedor__tablas--torneos .tabla__proximo--torneo {
@@ -1158,7 +1178,6 @@ p {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, auto);
     grid-template-areas: "fecha categoria" "inscribir  inscribir";
-    column-gap: 40px;
   }
 }
 .main__torneos .torneos__proximos .contenedor__tablas--torneos .tabla__proximo--torneo .contenedor__fecha {
@@ -1171,9 +1190,7 @@ p {
   grid-area: inscribir;
 }
 .main__torneos .torneos__proximos .contenedor__tablas--torneos .tabla__proximo--torneo .top-tabla {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: 1px solid rgb(189, 189, 189);
+  border-bottom: 1px solid rgb(246, 245, 245);
 }
 .main__torneos .torneos__proximos .contenedor__tablas--torneos .tabla__proximo--torneo .bottom__tabla {
   text-align: center;
@@ -1189,13 +1206,16 @@ p {
   grid-template-areas: "titulo" "art1" "art2";
   justify-items: center;
   row-gap: 10px;
-  padding: 0 5px 20px 5px;
+  padding: 0 0 20px 0;
 }
 @media (min-width: 1024px) {
   .main__torneos .torneos__finalizados {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "titulo titulo" "art1 art2";
+  }
+  .main__torneos .torneos__finalizados :nth-child(2) {
+    height: 100%;
   }
 }
 .main__torneos .torneos__finalizados .titulo__torneos--finalizados {

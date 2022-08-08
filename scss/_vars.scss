@@ -24,4 +24,5 @@ $h1Font: 'Bebas Neue', sans-serif;
 $h2Font: 'Rajdhani', sans-serif;
 $fontCharis: 'Charis SIL', serif;
 
-$boxShadow: 0 0 5px map-get($map: $colores, $key: 'g');
+$boxShadow: 0 0 5px map-get($map: $colores, $key: 'l1');
+$boxShadowBottom: 0px 15px 10px -15px map-get($map: $colores, $key: 'd1')

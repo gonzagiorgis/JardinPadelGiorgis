@@ -1,4 +1,5 @@
 @import "_commons";
+
 // inicio clases particulares del index
 .main__grid {
     display: grid;
@@ -22,6 +23,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 1024px) {
+        :nth-child(2) {
+            height: 100%;
+        }
+    }
+
 }
 
 .noticia__container {
@@ -29,6 +37,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 1024px) {
+        :nth-child(2) {
+            height: 100%;
+        }
+    }
+
 }
 
 .promos__container {
@@ -131,9 +146,11 @@
                 grid-template-areas:
                     "fecha categoria"
                     "inscribir inscribir";
-                column-gap: 10px;
                 justify-items: center;
                 row-gap: 10px;
+                padding: 0 0 8px 0;
+                background-color: map-get($map: $colores, $key: 'd1');
+                border-radius: 5px;
 
                 @media (min-width: 768px) {
                     grid-template-rows: auto;
@@ -149,7 +166,6 @@
                     grid-template-areas:
                         "fecha categoria"
                         "inscribir  inscribir";
-                    column-gap: 40px;
                 }
 
                 .contenedor__fecha {
@@ -165,9 +181,8 @@
                 }
 
                 .top-tabla {
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px;
-                    border-bottom: 1px solid map-get($map: $colores, $key: 'gl');
+                    border-bottom: 1px solid map-get($map: $colores, $key: 'l2');
+
                 }
 
                 .bottom__tabla {
@@ -191,7 +206,7 @@
             "art2";
         justify-items: center;
         row-gap: 10px;
-        padding: 0 5px 20px 5px;
+        padding: 0 0 20px 0;
 
         @media (min-width: 1024px) {
             grid-template-columns: repeat(2, auto);
@@ -199,6 +214,10 @@
             grid-template-areas:
                 "titulo titulo"
                 "art1 art2";
+
+            :nth-child(2) {
+                height: 100%;
+            }
         }
 
         .titulo__torneos--finalizados {

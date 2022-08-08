@@ -15,10 +15,7 @@
 
 .h2__rad {
     @include texto ($h2Font, 1.2rem, map-get($map: $colores, $key: 'd1'), center);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: map-get($map: $colores, $key: 'h2');
-    box-shadow: $boxShadow;
+    box-shadow: $boxShadowBottom;
     width: 80vw;
     padding: 5px;
     display: block;
@@ -30,7 +27,7 @@
 
     @media (min-width: 1024px) {
         font-size: 1.4rem;
-        width: 20vw;
+        width: max-content;
     }
 }
 
@@ -59,7 +56,6 @@
 .h3__roboto--background {
     @include texto($mainFont, 1.2rem, map-get($map: $colores, $key: 'l1'), center);
     font-weight: $textRegular;
-    background-color: map-get($map: $colores, $key: 'd1');
     padding: 5px;
 }
 
@@ -110,41 +106,46 @@
 
 .title__article {
     @include texto($mainFont, 1.2rem, map-get($map: $colores, $key: 'l2'), center);
-    background-color: map-get($map: $colores, $key: 'd1');
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     border-bottom: 1px solid map-get($map: $colores, $key: 'gl');
     padding: 0.3rem;
-
+   
     @media (min-width: 1024px) {
         font-size: 1.2rem;
     }
 }
 
 .title__promo {
-    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'l2'), );
-    background-color: map-get($map: $colores, $key: 'd1');
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom: 1px solid map-get($map: $colores, $key: 'gl');
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'd1'), );
+    border-bottom: 1px solid map-get($map: $colores, $key: 'd1');
     padding: 5px;
 }
 
 .text__roboto--article {
-    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'l2'), );
-    background-color: map-get($map: $colores, $key: 'd2');
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'l1'), );
+    padding: 5px 5px 5px 20px;
+    list-style: none;
+    line-height: 1.2em;
+
+    @media (min-width: 768px) {
+        text-align: right;;
+        
+    }
+}
+
+.text__robo--promo{
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'd1'), );
     padding: 5px;
     list-style: none;
     line-height: 1.2em;
 }
 
 .text__article--tips {
-    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'gd'), center);
+    @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'l2'), center);
     max-width: 90vw;
     margin-top: 5px;
     padding: 0 5px;
-    background-color: map-get($map: $colores, $key: 'h2back');
-    border-radius: 10px;
+    background-color: map-get($map: $colores, $key: 'd1');
+    border-radius: 5px;
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
 }

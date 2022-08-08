@@ -72,6 +72,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: map-get($map: $colores, $key: 'd1');
+    
 
     @media (min-width: 768px) {
         flex-direction: row;
@@ -79,10 +81,9 @@ p {
     }
 
     .img__article {
-        max-width: 97%;
-        box-shadow: $boxShadow;
+        width: 100%;
         flex-shrink: 0;
-
+        object-fit: cover;
         @media (min-width: 768px) {
             width: 50vw;
         }
@@ -99,6 +100,7 @@ p {
     background-color: rgb(71, 202, 73);
     border: none;
     @include texto($mainFont, 1rem, map-get($map: $colores, $key: 'w'), center);
+    margin: 0 10px;
 
     @media (min-width: 768px) {
         width: 80px;
