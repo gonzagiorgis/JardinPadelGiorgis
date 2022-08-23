@@ -3,7 +3,7 @@ Proyecto final del curso desarrollo web de la carrera Front End de Coder House
 Página del Club de Padel Jardín.
 
 Página de github:
-https://github.com/gonzagiorgis/JardinPadelGiorgis
+https://gonzagiorgis.github.io/JardinPadelGiorgis/
 
 Página del servidor:
 https://jardinpadel.netlify.app/index.html
